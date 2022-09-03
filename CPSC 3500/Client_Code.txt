@@ -1,0 +1,221 @@
+int actual_arg = *((int*) arg);
+ 
+for(unsigned int i = 0; i < 10; ++i)
+{
+  pthread_mutex_lock(&the_mutex);
+  
+  
+  count++;
+  std::cout << "Thread #" << actual_arg << " count = " << count << std::endl;
+  
+  
+  pthread_mutex_unlock(&the_mutex);
+}
+ 
+pthread_exit(NULL);
+
+
+/*
+ *
+ *
+ *
+ */
+
+
+
+while ( (n = recv (s, bp, cnt, 0)) > 0 )
+{
+   bp += n;
+   cnt = MAXBUF - (bp - bufin);
+}
+
+/*
+ *
+ *
+ *
+ */
+
+
+
+
+int rc[2];
+pthread_t ids[2];
+int args[2];
+
+count = 0;
+for(unsigned int i = 0; i < 2; ++i)
+{
+   args[i] = i;
+   rc[i] = pthread_create(&ids[i], NULL, myFunction, (void*) &args[i]);
+}
+
+for(unsigned int i = 0; i < 2; ++i)
+{
+   pthread_join(ids[i], NULL);
+}
+
+
+/*
+ *
+ *
+ *
+ */
+
+
+
+s = socket(PF_INET, SOCK_STREAM, 0);
+
+if ((result = connect (s, (struct sockaddr *) &sockme, sizeof(sockme))))
+{
+   perror("Connect failed\n");
+   close (s);
+   exit(-1);
+};
+
+
+/*
+ *
+ *
+ *
+ */
+
+
+
+int c1 = getchar();
+int c2 = getchar();
+int val = (10 * (c1 - '0')) + (c2 - '0');
+printf("%d\n", val);
+
+//int to ASCII
+int num = 12;
+int d1 = (num / 10) + '0';
+int d2 = (num % 10) + '0';
+printf("%c%c\n", d1, d2);
+
+
+/*
+ *
+ *
+ *
+ */
+
+
+
+result = send (s, msg.c_str(), total_characters, 0);
+
+if (result == -1)
+{
+   perror("Send failed");
+   exit(-1);
+}
+
+
+/*
+ *
+ *
+ *
+ */
+
+
+
+// Initialize data structure
+sockme.sin_family = AF_INET;
+
+if ((sockme.sin_addr.s_addr = inet_addr(hostnum)) == INADDR_NONE)
+{
+   cout << "Invalid dotted decimal address" << endl;
+   
+   exit(-1);
+}
+
+
+/*
+ *
+ *
+ *
+ */
+
+
+
+int n = 25;
+   
+   int first = 0;
+   int second = 1;
+   
+   for (int count=0; count < n; count++)
+   {
+      if (count > 1)
+      {
+         int next = first+second;
+         first = second;
+         second = next;
+         
+         cout << next << "\t";
+      }
+      else
+      {
+         cout << count << "\t";
+      }
+   }
+   
+   cout << endl;
+
+
+/*
+ *
+ *
+ *
+ */
+
+
+
+sockme.sin_port = htons(portnum);
+
+
+/*
+ *
+ *
+ *
+ */
+
+
+
+int rc[TOTAL_THREADS];
+pthread_t ids[TOTAL_THREADS];
+int args[TOTAL_THREADS];
+
+pthread_mutex_init(&the_mutex, 0);
+
+
+count = 0;
+for(unsigned int i = 0; i < TOTAL_THREADS; ++i) {
+   args[i] = i;
+   rc[i] = pthread_create(&ids[i], NULL, myFunction, (void*) &args[i]);
+}
+
+for(unsigned int i = 0; i < TOTAL_THREADS; ++i) {
+   pthread_join(ids[i], NULL);
+}
+
+std::cout << "Final count = " << count << std::endl;
+pthread_exit(NULL);
+
+
+
+/*
+ *
+ *
+ *
+ */
+
+
+
+if (process_id != 0)
+{
+   cout << "Part 3: Working With External Commands" << endl;
+   char * args[3] = {(char * )"ls", (char * )"-l", NULL};
+   
+   replaceProcess(args);
+   
+   cout << endl;
+}
