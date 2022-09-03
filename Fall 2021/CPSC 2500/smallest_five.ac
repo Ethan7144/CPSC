@@ -1,0 +1,76 @@
+#Ethan Tarlov
+#CPSC 2500
+#Assignment 5
+#smallest_five
+
+#Code Section
+#Get the starting adress of the LIST array in r1
+lli r1 &LIST
+lui r1 &LIST
+lli r4 0 #Initializing counter
+
+#Accept user
+USER_INPUT: in r2
+    sub r3 r0 r2 #r3 = 0 - r2 if r2 is negative r3 will be positive
+    bgz r3 &SEARCH
+    sw r2 r1 0
+    addi r1 r1 1
+    addi r4 r4 1 
+    bez r0 &USER_INPUT
+
+SEARCH: lli r1 &LIST #Again get the starting address of LIST array in  r1
+    lui r1 &LIST
+    lli r2 5 #Holds 5 for the total smallest numbers
+    sub r5 r2 r4 #r5 = r2 - r4 to check if count is less than five
+    bgz r5 &LESS
+    bez r0 &PARSE_ARRAY_INITIAL
+LESS: add r2 r4 r0 #r2 = r4 + 0 to set r2 to the value in the counter
+
+PARSE_ARRAY_INITIAL: lw r5 r1 0 #load the contents of memory location pointed to by r1
+    sub r5 r5 r6 #r5 = r6 - r5 to check if the current is greater than the previous
+    lw r6 r1 0 
+#This is to just fill r7 since it will automatically be 0 and therefore, needs to be filled ASAP, so this will make r6 r7
+    bgz r5 &HOLD_INITIAL
+
+HOLD_INITIAL: sub r5 r6 r7
+    bgz r5 &SMALLER	#Sets r7 initially,
+    bez r0 &PARSE_ARRAY
+
+PARSE_ARRAY: lw r5 r1 0 #load the contents of memory location pointed to by r1
+    sub r5 r6 r5 #r5 = r6 - r5 to check if the current is smaller than the previous
+    lw r6 r1 0 
+    #if r5 is positive than the current is smaller and should be held onto to see if it's the smallest
+    bgz r5 &HOLD
+    addi r1 r1 1
+    addi r4 r4 -1
+    bgz r4 &PARSE_ARRAY
+    bez r4 &FOUND
+ HOLD: sub r5 r7 r6
+    bgz r5 &SMALLER
+    bez r0 &PARSE_ARRAY
+
+
+SMALLER: add r7 r6 r0 #r7 = r6 + 0 Current Smallest Value
+    add r3 r1 r0 #r3 = r3 + 0 Address of the Smallest value
+    bgz r4 &PARSE_ARRAY
+
+FOUND: out r7
+    lli r7 0 #r7 = 0 to reset r7's value
+    add r4 r1 r0 #r4 = r1 + 0 to get the address of the final number
+    lli r1 &LIST #Resets the address of r1 back to list[0]
+    sub r4 r4 r1 #r4 = r4 - r1 to get the total number of inputs again
+    add r1 r3 r0 #r1 = r3 + 0 to get the address of the current smallest number
+    lli r3 &LIST2     
+    lui r3 &LIST2
+    sw r3 r1 0 #This is setting the Address of the Smallest Number to a huge number, so that it will not be called upon again
+    addi r2 r2 -1 #r2 = r2 - 1 so that it can eventually hit 0
+    lli r1 &LIST #Resets the array to the start
+    bgz r2 &PARSE_ARRAY_INITIAL
+    bez r2 &END
+
+END: .halt
+
+#Data section
+LIST: .fill 0
+
+LIST2: .fill 10000 

@@ -1,0 +1,25 @@
+#Ethan Tarlov
+#Division
+in r2 		# dividend
+in r3 		# divisor
+sub r7 r2 r3	# check if its equal to 0 or still greater
+bez r7 &ifE 	# if x and y are the same
+bgz r7 &while 	#if they are not
+
+ifE:  lli r4 1 	# 2/2 = 1 is what this does basically
+	lli r5 0
+	bez r0 &done
+
+while: sub r2 r2 r3 # add 1 to the quotient for every sub
+	 addi r4 r4 1
+	 bez r2 &done
+	 bgz r2 &while
+
+if:   addi r4 r4 -1   #if r2 is less than 0, it runs this
+	add r2 r2 r3
+	add r5 r5 r2
+
+done: out r4 		# r4 is quotient
+	out r5 		#r5 is remainder
+
+.halt

@@ -1,0 +1,29 @@
+#Ethan Tarlov
+#CPSC 2500
+#Assignment 5
+#xor.ac
+
+in r1 #1st input x
+in r2 #2nd input y
+sub r3 r2 r1  # this is saying r3 = y - x
+bez r1 &null  # if x = 0 go to null
+bez r2 &null  # if y = 0, go to null
+bez r3 &same  # if x = y, go to same
+bgz r3 &logic # check if y - x is > 0
+
+#or and and does the truth table output
+
+logic: or r4 r1 r2		#r4 = x|y
+	 and r5 r1 r2		#r7 = xy
+	 not r6 r5			#r6 = ~(xy)
+	 and r7 r4 r6		#r7 = r4 and r6
+	 out r7
+	 .halt
+
+same: lli r4 0		# set to 0
+	out r4
+	.halt
+
+null: lli r4 -1		#set to -1
+	out r4
+	.halt
