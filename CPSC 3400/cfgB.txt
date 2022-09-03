@@ -1,0 +1,5 @@
+#Ethan Tarlov
+
+S -> AB
+A -> AA | xz | Empty
+B -> BB | z | zy | xx

@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/matthewthayer/CLionProjects/CPSC_3500_Pthreads/pthread_test_1.cpp
+pthread.h
+-
+iostream
+-
+
+/Users/matthewthayer/CLionProjects/CPSC_3500_Pthreads/pthread_test_2.cpp
+pthread.h
+-
+iostream
+-
+
+/Users/matthewthayer/CLionProjects/CPSC_3500_Pthreads/pthread_test_3.cpp
+pthread.h
+-
+iostream
+-
+
+/Users/matthewthayer/CLionProjects/CPSC_3500_Pthreads/pthreads_skeleton.cpp
+pthread.h
+-
+iostream
+-
+

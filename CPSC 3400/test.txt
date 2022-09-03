@@ -1,0 +1,13 @@
+red white blue
+blue yellow green
+blue purple pink
+green yellow red
+blue pink green
+green purple black
+red green blue
+yellow pink brown
+blue white black
+purple pink green
+green black red
+red green white
+purple red green

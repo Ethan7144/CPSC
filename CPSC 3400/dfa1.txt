@@ -1,0 +1,9 @@
+A B C
+- 1 2 3 #A B C
+- 1 4 6 #AA AB AC
+- 4 2 5 #AB B BC
+- 6 5 3 # AC BC C
+- 4 4 7 # AB AB ABC
+- 7 5 5 # ABC BC BC
+- 6 7 6 # AC ABC AC
++ 7 7 7 # ABC ABC ABC

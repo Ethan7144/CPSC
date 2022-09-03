@@ -1,0 +1,10 @@
+red blue black
+yellow white purple
+red black blue
+teal blue red
+white black teal
+green teal black
+white purple red
+purple red black
+teal purple white
+red black white

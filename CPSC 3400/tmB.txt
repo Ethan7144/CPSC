@@ -1,0 +1,22 @@
+#Ethan Tarlov
+
+
+0, 5
+
+0, x, 0, x, R
+0, y, 0, y, R
+0, z, 1, A, R
+0, B, 5, B, R
+1, x, 2, z, L
+1, y, 3, z, L
+1, z, 1, z, R
+1, B, 4, B, L
+2, z, 2, z, L
+2, A, 0, x, R
+3, z, 3, z, L
+3, A, 0, y, R
+4, x, 5, x, R
+4, y, 5, y, R
+4, z, 4, B, L
+4, A, 5, B, R   
+4, B, 5, B, R

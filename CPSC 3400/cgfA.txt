@@ -1,0 +1,9 @@
+#Ethan Tarlov
+
+S -> A | D
+A -> 1A | A1 | 0B | B0 | Empty
+B -> 1B | B1 | 0C | C0
+C -> 1C | C1 | 0
+D -> DD | 0F | F0 | 1F | F1
+F -> 0G | G0 | 1G | G1
+G -> 0 | 1

@@ -1,0 +1,207 @@
+if (process_id != 0)
+{
+   cout << "Part 3: Working With External Commands" << endl;
+   char * args[3] = {(char * )"ls", (char * )"-l", NULL};
+   
+   replaceProcess(args);
+   
+   cout << endl;
+}
+
+
+/*
+ *
+ *
+ *
+ */
+
+
+// Just echo what was sent
+result = send (childs, bufin, strlen(bufin), 0);
+result = close(childs);
+
+
+/*
+ *
+ *
+ *
+ */
+
+
+
+int n = 25;
+   
+int first = 0;
+int second = 1;
+
+for (int count=0; count < n; count++)
+{
+   if (count > 1)
+   {
+      int next = first+second;
+      first = second;
+      second = next;
+      
+      cout << next << "\t";
+   }
+   else
+   {
+      cout << count << "\t";
+   }
+}
+   
+cout << endl;
+
+
+
+/*
+ *
+ *
+ *
+ */
+
+
+
+// Populate the data structure
+sockme.sin_family = AF_INET;
+sockme.sin_addr.s_addr = INADDR_ANY;
+sockme.sin_port = htons(portnum);
+
+
+/*
+ *
+ *
+ *
+ */
+
+
+
+int c1 = getchar();
+int c2 = getchar();
+int val = (10 * (c1 - '0')) + (c2 - '0');
+printf("%d\n", val);
+
+/*
+ *
+ *
+ *
+ */
+
+
+int num = 12;
+int d1 = (num / 10) + '0';
+int d2 = (num % 10) + '0';
+printf("%c%c\n", d1, d2);
+
+
+/*
+ *
+ *
+ *
+ */
+
+
+
+socklen_t alen = sizeof(newsockme);
+childs = accept(s, (struct sockaddr *) &newsockme, &alen);
+
+
+/*
+ *
+ *
+ *
+ */
+
+
+
+int rc[2];
+pthread_t ids[2];
+int args[2];
+
+count = 0;
+for(unsigned int i = 0; i < 2; ++i)
+{
+   args[i] = i;
+   rc[i] = pthread_create(&ids[i], NULL, myFunction, (void*) &args[i]);
+}
+
+for(unsigned int i = 0; i < 2; ++i)
+{
+   pthread_join(ids[i], NULL);
+}
+
+
+/*
+ *
+ *
+ *
+ */
+
+
+
+
+s = socket(PF_INET, SOCK_STREAM, 0);
+
+bind(s, (struct sockaddr *) &sockme, sizeof(sockme));
+
+
+// Queue up to 20 incoming requests
+result = listen(s, 20);
+
+
+/*
+ *
+ *
+ *
+ */
+
+
+
+
+(void) memcpy (B, A, SZ*sizeof(int));
+
+printf("Contents of B:\n");
+
+int iNdx;
+
+for (iNdx = 0; iNdx < SZ; iNdx++)
+{
+   printf("B[%d]=%d\n", iNdx, B[iNdx]);
+}
+
+
+/*
+ *
+ *
+ *
+ */
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <iostream>
+
+#include <unistd.h>
+#include <sys/socket.h>
+#include <arpa/inet.h>
+#include <netdb.h>
+#include <sys/types.h>
+
+using namespace std;
+
+#define MAXBUF 1000000
+
+
+struct sockaddr_in sockme, newsockme;
+int s, childs;
+char *hostnum;
+int type;
+int portnum;
+
+char bufout[1000];
+char bufin[MAXBUF+1];
+int result;
+char c, *cp;
+int n;
