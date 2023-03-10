@@ -1,0 +1,24 @@
+body {
+  background-color: rgb(208, 167, 53);
+  color: #EEE;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+label {
+  display: block;
+}
+
+section {
+  border: 1px solid black;
+  margin: 4pxxç;
+  padding: 4px;
+  border-radius: 8px;
+}
+
+section:nth-of-type(1) {
+  background-color: blue;
+}

@@ -1,0 +1,110 @@
+<html lang="en">
+    <style>
+    table, th, td {
+        border:1px solid black;
+      }
+      </style>
+    <head>
+        <meta charset = "UTF-8" />
+        <title> 
+           4910 Homework 1
+        </title>
+        <link rel="icon"  href="/tuxboi.jpeg" />
+    </head>
+    <body>
+        <h1> Ethan Tarlov CPSC Homepage
+        </h1>
+        <h2>
+            My Computer Science Career so far
+        </h2>
+        <section> 
+            <h3> My plans for the future</h3>
+            <p> My current plans for the future regarding what I have learned is to work in the field. I have
+                no preference for where I work at currently and just want to start working. Even if I do not 
+                start my career immediately, I will be taking certifications for languages like C# and C++ 
+                and also other ones like the A+ and cybersecurity certification. Hopefully, I will be able to apply
+                knowledge I learn from classes like Web Dev to be able to advance my career in the future. Though
+                I am not too sure of what I will do, I have confidence that I will be able to work it out somehow.
+            </p>
+        </section>
+        <section>
+            <h3> Computer Science Classes</h3>
+            <p> Below is a table of CPSC classes I have taken over my time here at
+                Seattle University.
+            </p> 
+            <table>
+                <tr> 
+                    <th> Class Number </th>
+                    <th> Class Name </th>
+                </tr>
+                <tr>
+                    <td> <a href="CPSC3200.html">CPSC 3200</a> </td>
+                    <td> Object Oriented Programming </td>
+                </tr>
+                <tr>
+                    <td> <a href="CPSC3500.html">CPSC 3500</a> </td>
+                    <td> Computing Systems </td>
+                </tr>
+                <tr>
+                    <td> <a href="CPSC4710.html">CPSC 4710</a> </td>
+                    <td> Security in Computing </td>
+                </tr>
+                <tr>
+                    <td> CPSC 4910 </td>
+                    <td> Web Development </td>
+                </tr>
+                <tr>
+                    <td> CPSC 4100 </td>
+                    <td> Design & Analysis of Algorithm </td>
+                </tr>
+                <tr>
+                    <td> CPSC 4240 </td>
+                    <td> Software as a Service </td>
+                </tr>
+            </table>
+        </section>
+        <section> 
+            <h3> Programming Languages </h3>
+            <p> Below is a list of the Programming Languages I know and they are currently ordered in how confident I am with them.</p>
+            <ol>
+                <li> C++ </li>
+                <li> C# </li>
+                <li> SQL </li>
+                <li> HTML </li>
+                <li> Python </li>
+                <li> Dart </li>
+            </ol>
+        </section>
+        <section>
+            <h3> Code Snippet </h3>
+            <p> Below is a code snippet from my Algorithms class, this is written in C#.</p>
+            <code><pre>
+                static int FirstFit(int[] weight, int maxWeight)
+                {
+                    int bin = 1, binSize = maxWeight;
+                    Array.Sort(weight);
+                    for (int i = 0; i < weight.Length; i++)
+                    {
+                        if (binSize - weight[i] < 0)
+                        {
+                            bin++;
+                            binSize = maxWeight;
+                            binSize = binSize - weight[i];
+                        }
+                        else
+                            binSize = binSize - weight[i];
+                    }
+                    return bin;
+                }
+            </code></pre>
+            <p>
+                What this code does it is creating a firstfit alogrithm for the bin packing problem. First Fit is a Heuristic Solution 
+                as it will solve the problem and give the total number of boxes needed at a much faster rate, but it will not
+                be as efficient of a solution when comparing to a heuristic solution. This code will return the total number of bins needed
+                to fit n boxes that will fill k size of the box. 
+            </p>
+        </section>
+    </body>
+
+</html>
+</html>

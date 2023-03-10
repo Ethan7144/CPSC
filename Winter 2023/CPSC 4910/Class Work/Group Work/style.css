@@ -1,0 +1,27 @@
+a:link { 
+    color: darkblue; 
+} 
+  a:visited{
+    color:darkblue;
+}
+  a:hover { 
+    color: lightblue; 
+}
+label > input, select{
+    display: block;
+}
+
+label + input, select{
+    display: block;
+}
+
+tbody td{
+    color: black;
+}
+tbody tr:nth-child(odd){
+    background-color: red;
+    color: #fff;
+  }
+tbody tr:nth-child(even){
+    background-color: #0088ff;
+}

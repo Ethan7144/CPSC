@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Lecture 2</title>
+        <link rel="icon" href="/images/rabbit.png" />
+        <link rel="stylesheet" href="/stylesheets/style.css" />
+    </head>
+    <body>
+        <h1>SeattleU Pizzeria</h1>
+        <form action="/order" method="POST">
+            <div>
+                <label>
+                    Name for your order:
+                    <input type="text" name="name" />
+                </label>
+            </div>
+            <section>
+                <h2>Crust</h2>
+                <label>
+                    <input type="radio" name="crust" value="regular" />
+                    Regular
+                </label>
+                <label>
+                    <input type="radio" name="crust" value="deep dish" />
+                    Deep dish
+                </label>
+                <label>
+                    <input type="radio" name="crust" value="gluten-free" />
+                    Gluten-free
+                </label>
+            </section>
+            <section>
+                <h2>Sauce</h2>
+                <select name="sauce">
+                    <optgroup label="Normal">
+                        <option value="marinara">Marinara</option>
+                        <option value="barbecue">Barbecue</option>
+                        <option>Pesto</option>
+                        <option>Alfredo</option>
+                        <option>Garlic</option>
+                        <option>Tikka masala</option>
+                        <option>None</option>
+                    </optgroup>
+                    <optgroup label="Cursed">
+                        <option>Cinnamon</option>
+                        <option>Ketchup</option>
+                        <option>Catsup</option>
+                    </optgroup>
+                </select>
+            </section>
+            <section>
+                <h2>Toppings</h2>
+                <label>
+                    <input type="checkbox" name="toppings" value="pepperoni" />
+                    Pepperoni
+                </label>
+                <label>
+                    <input type="checkbox" name="toppings" value="pepperoncini" />
+                    Pepperoncini
+                </label>
+                <label>
+                    <input type="checkbox" name="toppings" value="broccoli" />
+                    Broccoli
+                </label>
+                <label>
+                    <input type="checkbox" name="toppings" value="pineapple" />
+                    Pineapple
+                </label>
+                <label>
+                    <input type="checkbox" name="toppings" value="sausage" />
+                    Sausage
+                </label>
+                <label>
+                    <input type="checkbox" name="toppings" value="anchovies" />
+                    Anchovies
+                </label>
+            </section>
+            <div>
+                <label>
+                    Contact info:
+                    <input type="tel" name="phone" />
+                </label>
+                <label>
+                    Deliver by:
+                    <input type="date" name="delivery" />
+                </label>
+                <label>
+                    Additional instructions:
+                    <textarea name="instructions"></textarea>
+                </label>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </body>
+</html>
