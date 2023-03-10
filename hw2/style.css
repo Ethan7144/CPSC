@@ -1,0 +1,242 @@
+/* Setting colors for light and dark mode */
+:root {
+  --primary-color: rgb(170, 212, 253); 
+  --secondary-color: #a75edb; 
+  --dark-mode-primary-color:rgb(4, 27, 19);
+  --dark-mode-secondary-color:aquamarine; 
+}
+/* Navigation Bar */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: var(--primary-color);
+}
+.dark-mode ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: var(--dark-mode-primary-color);
+}
+
+
+li a {
+  float: left;
+  color: var(--secondary-color);
+  padding: 12px;
+  text-decoration: none;
+  width: 23%;
+  text-align: center;
+}
+.dark-mode li a {
+  float: left;
+  color: var(--dark-mode-secondary-color);
+  padding: 12px;
+  text-decoration: none;
+  width: 23%;
+  text-align: center;
+}
+
+.active {
+  background-color: var(--dark-mode-secondary-color);
+}
+.dark-mode .active {
+  background-color: var(--secondary-color);
+}
+
+li a:hover:not(.active) {
+  background-color: var(--dark-mode-primary-color);
+}
+.dark-mode li a:hover:not(.active) {
+  background-color: var(--primary-color);
+}
+
+/* Setting colors and fonts for dark mode and light across all pages */
+body {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+.dark-mode {
+  background-color: var(--dark-mode-primary-color);
+  color:var(--dark-mode-secondary-color); 
+}
+
+#theme-toggle {
+  border-radius: 5px;
+  position: fixed;
+  top:10px;
+  right:10px;
+  box-shadow: 5px 5px 5px gray;
+}
+
+#theme-toggle:active {
+  top:8px;
+  right:8px; 
+  box-shadow: none;
+}
+
+.dark-mode h1 { color: rgb(12, 81, 12) }
+
+.dark-mode h2 { color:rgb(21, 102, 23)}
+
+.dark-mode h3 { color:rgb(24, 87, 22)}
+
+.dark-mode h4 { color:rgb(45, 98, 38)}
+
+.dark-mode h5 { color:rgb(48, 77, 41)}
+
+.dark-mode h6 { color:rgb(30, 109, 30)}
+
+h1 { color: rgb(85, 145, 206); }
+
+h2 { color:rgb(49, 105, 162)}
+
+h3 { color:rgb(42, 116, 190)}
+
+h4 { color:rgb(40, 133, 225)}
+
+h5 { color:rgb(16, 58, 100)}
+
+h6 { color:rgb(10, 37, 64)}
+
+/* CSS for the Cascading Cafe Page */
+#homepage-content > h1{
+  text-align: center;
+}
+
+#homepage-content > h1 + img{
+  display: block;
+  width: 100vw;
+  height: auto;
+  margin: 0;
+  padding: 0;
+ }
+
+ @media screen and (max-width: 600px){
+  body > #homepage-content main > section:nth-child(4) {
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    grid-auto-rows: minmax(100px, auto);
+  }
+ }
+
+ 
+@media screen and (max-width: 601px) and (max-width: 1200px){
+  body > #homepage-content main > section:nth-child(4) {
+    display: grid; 
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        grid-auto-rows: minmax(100px, auto);
+  }
+ }
+
+ @media screen and (max-width: 1201px){
+  body > #homepage-content main > section:nth-child(4) {
+    display: grid; 
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        grid-auto-rows: minmax(100px, auto);
+  }
+ }
+
+ body > #homepage-content > section:nth-child(4) > img{
+  margin: 10px;
+  width: 350px;
+  height: 350px;
+ }
+
+
+
+
+/* CSS for the Menu Page*/
+ table thead tr td{
+    border-bottom: 3px solid black;
+    background-color: var(--primary-color);
+  }
+  table thead tr td{
+    border-bottom: 3px solid black;
+    background-color: #6946b9;
+  }
+
+section tr:nth-child(even){
+    background-color:#6946b9;
+    color:#d5def5;
+}
+
+section tr:nth-child(odd){
+  background-color:#7c73e6;
+  color:#d5def5;
+}
+
+h2{
+  font-weight: bold;
+}
+
+table td + td {
+  border-left: 3px solid black;
+
+}
+
+section tfoot
+{
+  font-size: smaller;
+  font-style: italic;
+  font-weight: none;
+}
+
+td:first-child
+{
+  font-weight: bold;
+}
+
+section dt{
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.gf::before
+{
+  content: "gf ";
+}
+
+.vg::before
+{
+  content: "vg ";
+}
+
+.gf.vg::before
+{
+content:"gf vg ";
+}
+/* This is for the Directions page */
+iframe{
+  border: none;
+  min-width: 450px;
+}
+
+article{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+span{
+  font-weight: bold;
+}
+
+a[href^=tel]{
+  font-style: normal;
+}
+
+a[href^=tel]::before{
+  content: "☎ ";
+}
+
+.new{
+  font-size: 2em;
+  background-color: #d0c308;
+}
+

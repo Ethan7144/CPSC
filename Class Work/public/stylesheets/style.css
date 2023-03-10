@@ -1,0 +1,30 @@
+body {
+  background-color: forestgreen;
+  color: #EEE;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+label {
+  display: block;
+}
+
+section {
+  border: 1px solid black;
+  margin: 4px;
+  padding: 4px;
+  border-radius: 8px;
+}
+
+section:nth-of-type(1) {
+  background-color: blue;
+}
+#toppings ul > li:nth-of-type(2n+1){
+  border: 2px;
+}
+input[type="radio"] + span::after {
+  content: 'wowzers';
+}
