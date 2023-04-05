@@ -9,8 +9,6 @@
  * UniquePtr gave Malloc errors, therefore, I commented out the function for testing it.
  * Addition Overload Test causes Segfault in CS1, so it is commented it out.
  */
-
-#include <memory>
 #include "inFest.h"
 #include "gridFlea.h"
 #include <iostream>
