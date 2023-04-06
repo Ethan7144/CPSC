@@ -3,7 +3,6 @@ import "dart:core";
 class Timer {
   DateTime? _startTime;
   DateTime? _stopTime;
-
   bool _isRunning = false;
 
   void start() {
@@ -36,8 +35,9 @@ class Timer {
   }
 
 
-  DateTime? get startTime => _startTime;
-  DateTime? get stopTime => _stopTime;
+  DateTime? get startTime => _startTime; // getters
+  DateTime? get stopTime => _stopTime; // getters
+  bool get isRunning => _isRunning; // getters
 
   String get displayString { // this is how it displays everything, run print(timer.displayString) in order to see all info about the run
     final duration = this.duration;
