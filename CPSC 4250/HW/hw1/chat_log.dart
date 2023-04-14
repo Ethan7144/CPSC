@@ -20,6 +20,7 @@ class ChatLog {
     return messages; // return the messages specified with offset or limit.
   }
 }
+
 void main() {
   ChatLog chatLog = ChatLog();
 
