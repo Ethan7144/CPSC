@@ -24,6 +24,7 @@ void swap(int& x, int& y);
 
 int main()
 {
+    // grabs heap size
     int heap[MAX_SIZE] = {0};
     int currentSize = 0;
     int count;
