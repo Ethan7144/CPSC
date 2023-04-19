@@ -1,6 +1,6 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'events/displayEvent.dart';
-import 'events/addevent.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -8,32 +8,13 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return CupertinoApp(
+    return MaterialApp(
       title: 'My App',
-      home: CupertinoTabScaffold(
-        tabBar: CupertinoTabBar(
-          items: const [
-            BottomNavigationBarItem(
-              icon: Icon(CupertinoIcons.calendar),
-              label: 'Events',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(CupertinoIcons.add),
-              label: 'Add Event',
-            ),
-          ],
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('My Events'),
         ),
-        tabBuilder: (BuildContext context, int index) {
-          if (index == 0) {
-            return CupertinoPageScaffold(
-              child: MyEventsPage(),
-            );
-          } else {
-            return CupertinoPageScaffold(
-              child: AddEventPage(onAddEvent: (Event ) {  },),
-            );
-          }
-        },
+        body: MyEventsPage(),
       ),
     );
   }
